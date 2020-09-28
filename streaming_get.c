@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
         printf("error: fail to initialize the cft library\n");
         return 1;
     }
-
+    
     const unsigned char* v_sz = cft_get_sz(&h, pointer);
     if (h.err != CFT_ERR_OK) {
         printf("error(%d): %s\n", h.err, h.err_msg);

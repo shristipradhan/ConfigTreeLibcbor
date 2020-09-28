@@ -60,8 +60,8 @@ typedef struct cft_context {
     FILE* fdw;                                        ///< CBOR data file descriptor for writing data
     size_t bytes_written;                             ///< Bytes that have been written to fdw
     char path[MAX_PATH_LEN + 1];                      ///< CBOR data file path
-    bool insert;
-    bool set;
+    bool insert;                                      ///< Indicate whether we need to insert the pointer
+    bool set;                                         ///< Indicate whether we need to set existing pointer to new value
     bool erase;                                       ///< Indicate whether we need to erase the pointer
 } cft_context_t;
 
